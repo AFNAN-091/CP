@@ -1,0 +1,76 @@
+//           * * ببسم الله الرحمن الرحيم    * *
+// ********************@Author**************************************
+//     ____     _____   __  _     ____     __  _
+//    / __ \   | ____| |  \| |   / __ \   |  \| |
+//   / /__\ \  | |__   | |\  |  / /__\ \  | |\  |
+//  /_/    \_\ |_|     |_| \_| /_/    \_\ |_| \_|
+ 
+#include<bits/stdc++.h>
+using namespace std;
+#define mod 1000000007
+#define lcm(a,b)    a*b/__gcd(a,b)
+#define endl '\n'
+#define FAsT ios_base::sync_with_stdio(false);cin.tie(NULL);
+#define sz 50000
+typedef long long ll;
+int rr[] = { -1, 1, 0, 0, -1, -1, 1, 1};
+int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
+/*--------------------------------------------------------------------*/
+
+void AFnaN()
+{
+  ll n,q;
+  cin>>n>>q;
+  vector<ll>v(n);
+  for(int i=0; i<n; i++)
+  {
+    int x;
+    cin>>x;
+    v[i] = x;
+  }
+
+  sort(v.begin(),v.end(),greater<ll>());
+
+  vector<ll>pre(n+1);
+
+  pre[0] = 0;
+
+ 
+  for(ll i=0; i<n; i++)
+  {
+    pre[i+1] = pre[i] + v[i];
+  }
+
+//   for(auto it:pre)
+//   {
+//     cout<<it<<" ";
+//   }
+
+  while(q--)
+  {
+    ll x,y;
+    cin>>x>>y;
+    
+    cout<<pre[x]-pre[x-y]<<endl;
+
+
+  }
+
+
+}
+
+int main()
+{   
+    FAsT  
+    ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
+
+    // cin >> t;
+
+    // while(t--)
+    // {
+       AFnaN();
+       
+    //}
+
+    exit(0);
+}
