@@ -17,37 +17,38 @@ int rr[] = { -1, 1, 0, 0, -1, -1, 1, 1};
 int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
 /*--------------------------------------------------------------------*/
 
-void AFnaN()
-{
-  
-}
+
 
 int main()
 {   
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    cin>>n>>m;
-    if(m>n)
+    cin>>t>>x;
+    ll cur = 1;
+    ll ans = 0;
+    while(t--)
     {
-        cout<<-1<<endl;
-        return 0;
+       cin>>a>>b;
+       
+       
+       while(1)
+       {
+            if(cur+x <=a)
+            {
+                cur = cur + x;
+            }
+            else 
+            {
+                ans +=(b-cur+1);
+                cur = b+1;
+                break;
+            }
+       }     
+     // cout<<cur<<endl; 
     }
 
-
-    
-    if(n%2==0)
-    {
-        a = n/2;
-    }
-    else{
-        a = n/2+1;
-    }
-    while(a%m!=0)
-    {
-        a++;
-    }
-    cout<<a<<endl;
+    cout<<ans<<endl;
 
     exit(0);
 }
