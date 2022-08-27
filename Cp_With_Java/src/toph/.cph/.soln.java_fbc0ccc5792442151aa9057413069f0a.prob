@@ -1,0 +1,1 @@
+{"name":"Local: soln","url":"e:\\CPP\\Cp_With_Java\\src\\toph\\soln.java","tests":[{"id":1660098374650,"input":"3\n4 5\n4 4\n5 2","output":"Sadia will be happy.\nSadia will be happy.\nOops!"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CPP\\Cp_With_Java\\src\\toph\\soln.java","group":"local","local":true}

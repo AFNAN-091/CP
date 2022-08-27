@@ -1,3 +1,4 @@
+package toph;
 import java.util.Scanner;
 
 public class Add_Them_Up {

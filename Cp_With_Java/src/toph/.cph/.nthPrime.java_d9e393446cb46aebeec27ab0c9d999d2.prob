@@ -1,0 +1,1 @@
+{"name":"Local: nthPrime","url":"e:\\CPP\\Cp_With_Java\\src\\toph\\nthPrime.java","tests":[{"id":1660098698472,"input":"2","output":"3"},{"id":1660098724492,"input":"1","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CPP\\Cp_With_Java\\src\\toph\\nthPrime.java","group":"local","local":true}
