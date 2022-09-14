@@ -19,7 +19,37 @@ int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
 void AFnaN()
 {
-  
+  ll n,d;
+  cin>>n>>d;
+  vector<ll> v(n);
+  for(auto &it: v)
+  {
+    cin>>it;
+  }
+//   for(auto it: v)
+//   {
+//     cout<<it<<" ";
+//   }
+
+  bool flag = false;
+  ll a,b;
+  a = b = d;
+  for(int i=0; i<n; i++)
+  {
+    if(v[i]>d)
+    {
+        flag = true;
+    }
+  }
+  sort(v.begin(),v.end());
+  //cout<<v[1];
+  if((v[0]+v[1]>d) and flag)
+  {
+    cout<<"NO"<<endl;
+  }
+  else{
+    cout<<"YES"<<endl;
+  }
 }
 
 int main()
@@ -27,9 +57,13 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin >> t;
+
+    while(t--)
+    {
+       AFnaN();
+       
+    }
 
     exit(0);
 }

@@ -27,9 +27,29 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin>>n;
+    if(n==0)
+    {
+        cout<<1<<endl;
+    }
+    else{
+        a = n%4;
+        if(a==0)
+        {
+            cout<<6<<endl;
+        }
+        else if(a==3)
+        {
+            cout<<2<<endl;
+        }
+        else if(a==2)
+        {
+            cout<<4<<endl;
+        }
+        else{
+            cout<<8<<endl;
+        }
+    }
 
     exit(0);
 }

@@ -19,7 +19,23 @@ int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
 void AFnaN()
 {
-  
+  string s;
+  cin>>s;
+  cout<<s[0];
+  for(int i=1; i<s.size()-1; i++)
+  {
+    if(s[i]==s[i+1])
+    { 
+        cout<<s[i];
+        i++;
+        continue;
+    }
+    else{
+        cout<<s[i];
+    }
+  }
+  cout<<s[s.size()-1];
+  cout<<endl;
 }
 
 int main()
@@ -27,9 +43,13 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin >> t;
+
+    while(t--)
+    {
+       AFnaN();
+       
+    }
 
     exit(0);
 }

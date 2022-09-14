@@ -19,7 +19,41 @@ int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
 void AFnaN()
 {
+  ll n,k;
+  cin>>n>>k;
+  vector<int>demo;
+  for(int i=1; i<=n; i++)
+  {
+    int x;
+    cin>>x;
+    demo.push_back(x);
+  }
+  map<int,int>first;
+  map<int,int>last;
+  for(int i=0; i<n; i++)
+  {
+    if(first.find(demo[i])==first.end())
+    {
+        first[demo[i]] = i;
+    }
+    last[demo[i]] = i;
+  }
   
+  while(k--)
+  {
+    ll x,y;
+    cin>>x>>y;
+    if(first.find(x)==first.end() || last.find(y)==last.end())
+    {
+        cout<<"NO"<<endl;
+        continue;
+    }
+   
+    int a = first[x];
+    int b = last[y];
+    cout<<(a>b?"NO":"YES")<<endl;
+    
+  }
 }
 
 int main()
@@ -27,9 +61,13 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin >> t;
+
+    while(t--)
+    {
+       AFnaN();
+       
+    }
 
     exit(0);
 }

@@ -19,7 +19,35 @@ int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
 void AFnaN()
 {
-  
+  ll n,m,k;
+  cin>>n>>m>>k;
+  bitset<32> bt[m+1];
+  for(int i=0; i<=m; i++)
+  {
+    int x; 
+    cin>>x;
+    bt[i] = x;
+  }
+ 
+  int ans = 0;
+//   for(int i=0; i<=m; i++)
+//     cout<<bt[i]<<endl;
+  for(int i=0; i<m; i++)
+  {
+     int k_df = 0;
+    for(int j=0; j<32; j++)
+    {
+        if(bt[m][j]!=bt[i][j])
+        {
+            k_df++;
+        }
+    }
+    if(k_df<=k)
+    {
+        ans++;
+    }
+  }
+  cout<<ans<<endl;
 }
 
 int main()
@@ -27,9 +55,12 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    //cin >> t;
+
+    
+       AFnaN();
+       
+  
 
     exit(0);
 }

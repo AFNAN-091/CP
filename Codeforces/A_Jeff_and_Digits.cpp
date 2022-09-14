@@ -27,9 +27,40 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin>>n;
+    
+    ll cnt = 0;
+    vector<int>v(n);
+    map<int,int>mp;
+    for(int i=0; i<n; i++)
+    {
+        cin>>x;
+        mp[x]++;
+    }
+
+  //  cout<<mp[5]<<endl;
+   // cout<<mp[0]<<endl;
+    
+    if(mp[5]>8 and mp[0]>0)
+    {
+        a = mp[5]/9;
+        a*=9;
+        for(int i=0; i<a; i++)
+        {
+            cout<<5;
+        }
+        for(int i=0; i<mp[0]; i++)
+        {
+            cout<<0;
+        }
+        cout<<endl;
+    }
+    else if(mp[0]>0){
+        cout<<0<<endl;
+    }
+    else{
+        cout<<-1<<endl;
+    }
 
     exit(0);
 }

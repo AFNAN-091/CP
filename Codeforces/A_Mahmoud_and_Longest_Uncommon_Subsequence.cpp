@@ -19,17 +19,27 @@ int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
 void AFnaN()
 {
-  
+
+
 }
 
 int main()
 {   
     FAsT  
-    ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
+    ll a, b, c, d, e, f, g, h, k, len, p, q, r, t, x, y, z;
+    string n,m;
+    cin>>n>>m;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    a = n.size();
+    b = m.size();
+
+    if(m==n)
+    {
+        cout<<-1<<endl;
+    }
+    else{
+        cout<<max(a,b)<<endl;
+    }
 
     exit(0);
 }

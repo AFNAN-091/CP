@@ -19,7 +19,29 @@ int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
 void AFnaN()
 {
-  
+  ll n;
+  cin>>n;
+  ll a[n];
+  ll maxa = 0;
+  ll cnt = 0;
+  for(int i=0; i<n; i++)
+  {
+    cin>>a[i];
+    cnt+=a[i];
+    maxa = max(maxa,cnt);
+  }
+  ll m;
+  cin>>m;
+  ll b[m];
+  ll maxb = 0;
+  cnt = 0;
+  for(int i=0; i<m; i++)
+  {
+    cin>>b[i];
+    cnt+=b[i];
+    maxb = max(maxb,cnt);
+  }
+  cout<<maxa+maxb<<endl;
 }
 
 int main()
@@ -27,9 +49,13 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin >> t;
+
+    while(t--)
+    {
+       AFnaN();
+       
+    }
 
     exit(0);
 }

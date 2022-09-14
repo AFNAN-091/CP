@@ -27,9 +27,23 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin>>n;
+    vector<ll>v(n);
+    for(auto &it: v)
+    {
+        cin>>it;
+    }
+    sort(v.begin(),v.end());
+   
+    for(int i=0; i+3<=n; i++)
+    {
+        if(v[i]+v[i+1]>v[i+2])
+        {
+            cout<<"YES"<<endl;
+            return 0;
+        }
+    }
 
+    cout<<"NO"<<endl;
     exit(0);
 }

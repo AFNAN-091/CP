@@ -19,7 +19,35 @@ int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
 void AFnaN()
 {
-  
+  ll n;
+  cin >> n;
+ 
+  if(n % 4 == 0) {
+ 
+    for(int i=0; i+3 < n; i+=4) cout << i <<" " <<i+1 <<" "<<i+3<<" "<<i+2<<" ";
+    cout << "\n";
+    return;
+  }
+  if(n % 4 == 1) {
+ 
+    for(int i=4; i+3 < n+4; i+= 4) cout << i <<" " <<i+1 <<" "<<i+3<<" "<<i+2<<" ";
+    cout << "0\n";
+    return;
+  }
+ 
+  if(n % 4 == 2) {
+ 
+    for(int i=16; i+3 < n+12; i+=4) cout << i <<" " <<i+1 <<" "<<i+3<<" "<<i+2<<" ";
+    // 6 left
+ 
+    cout << "12 8 2 4 1 3\n";
+    return;
+ 
+  }
+ 
+  for(int i=4; i+3 < n+4; i+=4) cout << i <<" " <<i+1 <<" "<<i+3<<" "<<i+2<<" ";
+ 
+  cout << "2 1 3\n";
 }
 
 int main()
@@ -27,9 +55,13 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin >> t;
+
+    while(t--)
+    {
+       AFnaN();
+       
+    }
 
     exit(0);
 }

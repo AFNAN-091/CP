@@ -25,11 +25,22 @@ void AFnaN()
 int main()
 {   
     FAsT  
-    ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
+    //ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    ll n,m;
+    cin>>n>>m;
+    vector<ll>a(n),b(m);
+    for(auto &it : a)
+        cin>>it;
+
+    for(auto &it: b)
+        cin>>it;
+    
+    sort(a.begin(),a.end());
+    for(int i=0; i<m; i++)
+    {
+         cout<<(upper_bound(a.begin(),a.end(),b[i])-a.begin())<<" ";   
+    }
 
     exit(0);
 }

@@ -27,9 +27,52 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin>>n>>a;
+    vector<ll>v(n+1);
+
+    for(int i=1; i<=n; i++)
+    {
+        cin>>v[i];
+    }
+    
+    int i = a;
+    int j = a;
+    ll cnt = 0;
+    while(i>0 and j<=n)
+    {
+        if(v[i]==1 and v[j]==1)
+        {
+            if(i==j)
+            {
+                cnt++;
+                i--;
+                j++;
+                continue;
+            }
+            cnt+=2;           
+        }
+        i--;
+        j++;
+    }
+
+    while(i>0)
+    {
+        if(v[i]==1)
+        {
+            cnt++;
+        }
+        i--;
+    }
+    while(j<=n)
+    {
+        if(v[j]==1)
+        {
+            cnt++;
+        }
+        j++;
+    }
+
+    cout<<cnt<<endl;
 
     exit(0);
 }

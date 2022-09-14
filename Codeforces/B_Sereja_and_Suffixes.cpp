@@ -27,9 +27,38 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin>>n>>m;
+    vector<int>v(n);
+    for(int i=0; i<n; i++)
+    {
+        cin>>x;
+        v[i] = x;
+    }
+
+    vector<int>pre(n+1);
+    pre[0] = 0;
+    reverse(v.begin(),v.end());
+    map<int,int>mp;
+    int cnt = 0;
+    for(int i=0; i<n; i++)
+    {
+        if(!mp[v[i]])
+        {
+            cnt++;
+            pre[n-i] = cnt;
+            mp[v[i]]++;
+        }
+        else{
+            pre[n-i] = cnt;
+        }
+
+    }
+    while(m--)
+    {
+        cin>>q;
+        cout<<pre[q]<<endl;
+    }
+
 
     exit(0);
 }

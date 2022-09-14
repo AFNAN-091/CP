@@ -19,7 +19,7 @@ int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
 void AFnaN()
 {
-  
+
 }
 
 int main()
@@ -27,9 +27,20 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin>>n;
+    map<pair<int,int>,int>mp;
+    ll cnt = 1;
+    for(int i=0; i<n; i++)
+    {
+        cin>>a>>b;
+        mp[{a,b}]++;
+        if(cnt<mp[{a,b}])
+        {
+            cnt = mp[{a,b}];
+        }
+    }
+
+    cout<<cnt<<endl;
 
     exit(0);
 }

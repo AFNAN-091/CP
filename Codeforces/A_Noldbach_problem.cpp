@@ -27,9 +27,54 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin>>n>>k;
 
+    vector<int>prime;
+    vector<int>check(n+1,false);
+    check[0] = true;
+    check[1] = true;
+    for(int i=2; i<=n; i++)
+    {
+        if(!check[i])
+        {
+            for(int j = i*i; j<=n; j+=i)
+            {
+                check[j] = true;
+            }
+        }
+    }
+
+    for(int i=2; i<=n; i++)
+    {
+        if(!check[i])
+        {
+            prime.push_back(i);
+        }
+    }
+
+    
+    // for(auto it: prime)
+    // {
+    //     cout<<it<<" ";
+    // }
+    m = n-1;
+    ll cnt = 0;
+    for(int i=1; i<prime.size(); i++)
+    {
+        m = prime[i-1]+prime[i]+1;
+       // cout<<m<<endl;
+        if(m<=n and !check[m])
+        {
+            cnt++;
+        }
+    }
+
+    if(k<=cnt)
+    {
+        cout<<"YES"<<endl;
+    }
+    else{
+        cout<<"NO"<<endl;
+    }
     exit(0);
 }

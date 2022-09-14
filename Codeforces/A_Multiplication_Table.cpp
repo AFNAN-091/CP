@@ -27,9 +27,18 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin>>n>>x;
+    ll ans = 0;
+    for(int i=1; i<=n; i++)
+    {
+        a = n*i;
+        if(a>=x and x%i==0)
+        {
+            ans++;
+        }
+    }
+
+    cout<<ans<<endl;
 
     exit(0);
 }

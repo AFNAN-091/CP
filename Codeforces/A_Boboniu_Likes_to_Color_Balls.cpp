@@ -19,7 +19,53 @@ int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
 void AFnaN()
 {
+  ll arr[4];
+  for(int i=0; i<4; i++)
+  {
+    cin>>arr[i];
+  }
+  ll odd = 0;
+  ll sum = 0;
+  ll zero = 0;
+  for(int i=0; i<3; i++)
+  {
+    if(arr[i]%2==1)
+    {
+    //    cout<<arr[i]<<" ";
+        odd++;
+    }
+    if(arr[i]==0)
+    {
+        zero++;
+    }
+    sum+=arr[i];
+  }
   
+//  cout<<odd<<endl;
+  if(zero>0 and odd>0 and arr[3]%2==1)
+  {
+    cout<<"No"<<endl;
+  }
+  else if(odd==2 and sum>2 and arr[3]%2==1)
+  {
+    cout<<"Yes"<<endl;
+  }
+  else if(odd==0)
+  {
+    cout<<"Yes"<<endl;
+  }
+  else if(odd==3)
+  {
+   // cout<<"fds";
+    cout<<"Yes"<<endl;
+  }
+  else if(odd == 1 and arr[3]%2==0 )
+  {
+    cout<<"Yes"<<endl;
+  }
+  else{
+    cout<<"No"<<endl;
+  }
 }
 
 int main()
@@ -27,9 +73,13 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin >> t;
+
+    while(t--)
+    {
+       AFnaN();
+       
+    }
 
     exit(0);
 }

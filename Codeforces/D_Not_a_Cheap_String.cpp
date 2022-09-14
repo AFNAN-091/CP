@@ -19,7 +19,50 @@ int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
 void AFnaN()
 {
-  
+  string s;
+  cin>>s;
+  ll p;
+  cin>>p;
+  ll sum = 0;
+ // cout<<"ye";
+  vector<vector<int>>v(26);
+
+  for(int i=0; i<s.size(); i++)
+  {
+     int a = s[i]-'a';
+     sum+=a+1;
+   //  cout<<a<<" ";
+     v[a].push_back(i);
+  }
+  //cout<<endl;
+
+  vector<int>index(s.size(),false);
+  for(int i=25; i>=0; i--)
+  {
+    while(sum > p and !v[i].empty())
+    {
+        index[v[i].back()] = true;
+        v[i].pop_back();
+        sum-=(i+1);
+    }
+  }
+
+//   for(int i=0; i<s.size(); i++)
+//   {
+//     cout<<index[i]<<" ";
+//   }
+  //cout<<endl;
+
+  for(int i=0; i<s.size(); i++)
+  {
+    if(!index[i])
+    {
+        cout<<s[i];
+    }
+  }
+
+  cout<<endl;
+
 }
 
 int main()
@@ -27,9 +70,13 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin >> t;
+
+    while(t--)
+    {
+       AFnaN();
+       
+    }
 
     exit(0);
 }

@@ -19,7 +19,36 @@ int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
 void AFnaN()
 {
+  ll n;
+  cin>>n;
+  vector<ll>v(n);
+  for(auto &it: v)
+  {
+    cin>>it;
+  }
   
+  ll k;
+  cin>>k;
+  set<ll>st;
+  for(int i=0; i<k; i++)
+  {
+    ll x;
+    cin>>x;
+    st.insert(x);
+  }
+
+  for(int i=0; i<n; i++)
+  {
+    if(st.count(v[i]))
+    {
+        continue;
+    }
+    else{
+        cout<<v[i]<<" ";
+    }
+  }
+  cout<<endl;
+
 }
 
 int main()
@@ -27,9 +56,13 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin >> t;
+
+    while(t--)
+    {
+       AFnaN();
+       
+    }
 
     exit(0);
 }

@@ -26,10 +26,41 @@ int main()
 {   
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
+    cin>>k;
+    string s;
+    cin>>s;
+    string ans = "";
+    map<char,int>mp;
+    for(int i=0; i<s.size(); i++)
+    {
+        mp[s[i]]++;
+    }
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    for(auto it: mp)
+    {        
+      if(it.second%k!=0)
+        {
+            cout<<-1<<endl;
+            return 0;
+        }
+        else {
+            a = it.second/k;
+            char cc = it.first; 
+        //    cout<<a<<" "<< cc <<endl;
+            for(int i=0; i<a; i++)
+            {
+              
+                ans+=cc;
+            }
+        }
+        
+    }
+    
+    for(int i=0; i<k; i++)
+    {
+        cout<<ans;
+    }
+    cout<<endl;
 
     exit(0);
 }

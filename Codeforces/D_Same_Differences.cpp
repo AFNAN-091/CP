@@ -19,6 +19,23 @@ int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
 void AFnaN()
 {
+  ll n;
+  cin>>n;
+  map<ll,ll>mp;
+  for(int i=1; i<=n; i++)
+  {
+    int x;
+    cin>>x;
+
+    mp[x-i]++;
+  }
+  ll ans = 0;
+  for(auto it: mp)
+  {  
+    ans+=(it.second*(it.second-1))/2;
+  }
+
+  cout<<ans<<endl;
   
 }
 
@@ -27,9 +44,13 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin >> t;
+
+    while(t--)
+    {
+       AFnaN();
+       
+    }
 
     exit(0);
 }

@@ -21,15 +21,55 @@ void AFnaN()
 {
   
 }
-
+vector<int>prime;
+int visit[1002];
+void isprime()
+{
+    for(int i=2; i*i<=1000; i++)
+    {
+        if(!visit[i])
+        {
+            
+            for(int j=i*i; j<=1000; j+=i)
+            {
+              //  cout<<j<<" ";
+                visit[j] = true;
+            }
+        }        
+    }
+    for(int i=2; i<1000; i++)
+    {
+        if(!visit[i]) 
+        {
+             prime.push_back(i);
+        }
+    }
+    
+}
 int main()
 {   
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    //isprime();
+    cin>>t;
+    while(t--)
+    {
+       cin>>n;
+       if(n==1)
+       {
+        cout<<-1<<endl;
+        continue;
+       }
+       cout<<2;
+       for(int i=0; i<n-1; i++)
+       {
+        cout<<3;
+       }
+       cout<<endl;
+       // auto it = lower_bound(prime.begin(),prime.end(),a);
+        //cout<<it-prime.begin()<<endl;
+    }
 
     exit(0);
 }

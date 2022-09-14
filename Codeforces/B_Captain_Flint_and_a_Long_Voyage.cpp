@@ -19,6 +19,25 @@ int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
 
 void AFnaN()
 {
+  ll n;
+  cin>>n;
+  ll a = ceil(n/4.0);
+  //cout<<a<<endl;
+  if(n==1)
+  {
+    cout<<8<<endl;
+    return;
+  }
+  for(int i=0; i<n-a; i++)
+  {
+    cout<<9;
+  }
+  for(int i=0; i<a; i++)
+  {
+    cout<<8;
+  }
+
+  cout<<endl;
   
 }
 
@@ -27,9 +46,13 @@ int main()
     FAsT  
     ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
+    cin >> t;
+
+    while(t--)
+    {
+       AFnaN();
+       
+    }
 
     exit(0);
 }
