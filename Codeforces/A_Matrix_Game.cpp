@@ -1,0 +1,71 @@
+//           * * ببسم الله الرحمن الرحيم    * *
+// ********************@Author**************************************
+//     ____     _____   __  _     ____     __  _
+//    / __ \   | ____| |  \| |   / __ \   |  \| |
+//   / /__\ \  | |__   | |\  |  / /__\ \  | |\  |
+//  /_/    \_\ |_|     |_| \_| /_/    \_\ |_| \_|
+ 
+#include<bits/stdc++.h>
+using namespace std;
+#define mod 1000000007
+#define lcm(a,b)    a*b/__gcd(a,b)
+#define endl '\n'
+#define FAsT ios_base::sync_with_stdio(false);cin.tie(NULL);
+#define sz 50000
+typedef long long ll;
+int rr[] = { -1, 1, 0, 0, -1, -1, 1, 1};
+int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
+/*--------------------------------------------------------------------*/
+
+void AFnaN()
+{
+  ll n,m;
+  cin>>n>>m;
+
+  ll arr[n][m];
+  set<ll>r,c;
+  for(int i=0; i<n; i++)
+  {
+    for(int j=0; j<m; j++)
+    {
+        ll x;
+        cin>>x;
+        arr[i][j] = x;
+        if(x==1)
+        {
+            r.insert(i);
+            c.insert(j);
+        }
+    }
+
+  }
+
+  ll mn = min(n-r.size(),m-c.size());
+
+  if(mn%2==0)
+  {
+    cout<<"Vivek"<<endl;
+  }
+  else{
+    cout<<"Ashish"<<endl;
+  }
+ 
+  
+}
+
+int main()
+{   
+    FAsT  
+    ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
+
+    cin >> t;
+
+    while(t--)
+    {
+       AFnaN();
+       
+    }
+
+    exit(0);
+}
+
