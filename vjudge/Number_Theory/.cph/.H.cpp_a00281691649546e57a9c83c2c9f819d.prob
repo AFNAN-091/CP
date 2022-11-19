@@ -1,0 +1,1 @@
+{"name":"Local: H","url":"f:\\Afnan_Desktop\\OneDrive\\Desktop\\CP\\vjudge\\Number_Theory\\H.cpp","tests":[{"id":1667240922672,"input":"3\n100000 100000\n12 24\n747794 238336","output":"36\n6\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Afnan_Desktop\\OneDrive\\Desktop\\CP\\vjudge\\Number_Theory\\H.cpp","group":"local","local":true}
