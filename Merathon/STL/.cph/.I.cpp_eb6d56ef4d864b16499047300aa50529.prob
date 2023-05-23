@@ -1,0 +1,1 @@
+{"name":"Local: I","url":"e:\\CP\\Merathon\\STL\\I.cpp","tests":[{"id":1670225773215,"input":"(*a++(*)\n(*a{+}*)","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\CP\\Merathon\\STL\\I.cpp","group":"local","local":true}
