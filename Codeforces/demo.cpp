@@ -1,35 +1,25 @@
-//           * * ببسم الله الرحمن الرحيم    * *
-// ********************@Author**************************************
-//     ____     _____   __  _     ____     __  _
-//    / __ \   | ____| |  \| |   / __ \   |  \| |
-//   / /__\ \  | |__   | |\  |  / /__\ \  | |\  |
-//  /_/    \_\ |_|     |_| \_| /_/    \_\ |_| \_|
- 
-#include<bits/stdc++.h>
-using namespace std;
-#define mod 1000000007
-#define lcm(a,b)    a*b/__gcd(a,b)
-#define endl '\n'
-#define FAsT ios_base::sync_with_stdio(false);cin.tie(NULL);
-#define sz 50000
-typedef long long ll;
-int rr[] = { -1, 1, 0, 0, -1, -1, 1, 1};
-int cc[] = {0, 0, -1, 1, -1, 1, -1, 1};
-/*--------------------------------------------------------------------*/
+if(n%2)
+        {
+            int x = n / 2;
+            int a,b;
+            int sum_x,sum_y;
+            for(int i=x-100000; i<=x+100000; i++)
+            {
+                a=i;
+                b=n-i;
+                if(i>=0 && a+b==n)
+                {
+                    sum_x = sumOfDigits(a);
+                    sum_y = sumOfDigits(b);
 
-void AFnaN()
-{
-  
-}
+                    if (abs(sum_x - sum_y) <= 1)
+                    {
 
-int main()
-{   
-    FAsT  
-    ll a, b, c, d, e, f, g, h, k, len, n, m, p, q, r, t, x, y, z;
 
-    vector<int>arr = {5, 6, 7, 7, 6, 5, 5, 6};
-    sort(arr.begin(),arr.end());
-    cout<<(lower_bound(arr.begin(),arr.end(),7)-arr.begin())<<endl;
-
-    exit(0);
-}
+                        cout << i << " " << n-i << std::endl;
+                        break;
+                    }
+                }
+            }
+        }
+        else cout<<n/2<<" "<<n/2<<endl;

@@ -1,0 +1,20 @@
+.design-album{
+    color: purple;
+    font-size: medium;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.design-button{
+    color: green;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.design-next{
+    color: palevioletred;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
